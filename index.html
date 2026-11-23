@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kiểm tra tốc đố</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🎯 Kiểm tra tốc độ</h1>
+
+  <div class="info">
+    <div>Điểm<b id="score">0</b></div>
+    <div>Thời gian<b><span id="time">30</span>s</b></div>
+    <div id="combo">Combo<b id="comboVal">x1</b></div>
+    <div>Kỷ lục<b id="best">0</b></div>
+  </div>
+  <div class="bar"><div id="bar"></div></div>
+
+  <div class="wrap">
+    <div id="arena">
+      <div id="target"></div>
+      <div id="overlay">
+        <span>Hết giờ!</span>
+        <span>Tổng điểm đạt được</span>
+        <strong id="finalScore">0</strong>
+        <span id="newBest"></span>
+        <small id="stats"></small>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <label>Thời gian:
+      <select id="duration">
+        <option value="10">10 giây</option>
+        <option value="20">20 giây</option>
+        <option value="30" selected>30 giây</option>
+        <option value="45">45 giây</option>
+        <option value="60">60 giây</option>
+      </select>
+    </label>
+    <label>Độ khó:
+      <select id="level">
+        <option value="easy">Dễ</option>
+        <option value="normal" selected>Thường</option>
+        <option value="hard">Khó</option>
+      </select>
+    </label>
+    <button id="startBtn">Bắt đầu trò chơi</button>
+  </div>
+
+  <div class="controls">
+    <button id="colorBtn">🎨 Đổi màu nền</button>
+    <button id="playerBtn">👤 Người chơi</button>
+  </div>
+  <div id="playerInfo" hidden></div>
+
+  <p class="hint">Bóng đỏ: +1 điểm. Bóng vàng (hiếm): +3 điểm. Trúng liên tiếp để nhân combo, click trượt sẽ mất combo.</p>
+
+  <script src="script.js"></script>
+</body>
+</html>
